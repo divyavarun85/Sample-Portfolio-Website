@@ -5,13 +5,66 @@
 }
 
 .home {
-  height: 10%;
+  height: 100%;
   padding-top: 40vh;
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: url("../img/model-1.jpg");
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
   background-size: cover;
+}
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.home__name--last {
+  color: #ff652f;
+  font-weight: 700;
+}
+
+/*Creating the burger menu button*/
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
 }
 
 body {
@@ -49,10 +102,11 @@ main .social-icons {
   bottom: 1rem;
   left: 1rem;
 }
-main a {
+main .social-icons a {
   padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
 }
-main a:hover {
+main .social-icons a:hover {
   color: #ff652f;
 }
 
@@ -64,23 +118,4 @@ footer {
   text-align: right;
   padding: 1rem;
   color: #fff;
-}
-
-.home {
-  height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
-  background-size: cover;
-}
-.home__name {
-  font-size: 5rem;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
-  border-bottom: 2px solid #fff;
-}
-.home__name--last {
-  color: #ff652f;
 }/*# sourceMappingURL=main.css.map */

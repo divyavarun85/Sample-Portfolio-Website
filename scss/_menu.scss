@@ -16,7 +16,7 @@
     top: 0.5rem;
     width: 28px;
     height: 3px;
-    background: set-text-color($primary-color);
+    background: set-text-color($primary-color); //setting the white line
     @include transition-ease;
 
     &::before {
@@ -41,7 +41,16 @@
 
     &.open {
       transform: rotate(720deg);
-      background: transparent;
+      background: transparent; //when setting background is transparent,
+      //   the center line will be transparent
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
     }
   }
 }

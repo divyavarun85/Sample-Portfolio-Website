@@ -74,6 +74,43 @@
   transform: rotate(-45deg) translate(3px, -7px);
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #272727;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translate(0);
+}
+.nav .menu-nav.__item {
+  transform: translate(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.__item.open {
+  transform: translateX(0);
+}
+.nav .menu-nav.__item.active > a {
+  color: #ff652f;
+}
+
 body {
   background: #272727;
   color: #fff;
